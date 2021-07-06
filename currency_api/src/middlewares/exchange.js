@@ -9,7 +9,7 @@ const fetchRates = async (req, res, next) => {
   const fromCurrency = req.body.fromCurrency;
   const toCurrency = req.body.toCurrency;
   let rate = cache.get(`${fromCurrency}-${toCurrency}`);
-  console.log(`Cache ${rate}`);
+
   if (!rate) {
     try {
       const data = await fetch(
