@@ -1,0 +1,59 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1/convert/": {
+      "post": {
+        "tags": [],
+        "description": "Endpoint to convert currency.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fromCurrency": {
+                  "type": "string",
+                  "example": "EUR"
+                },
+                "toCurrency": {
+                  "type": "string",
+                  "example": "LKR"
+                },
+                "amount": {
+                  "type": "number",
+                  "example": 500
+                }
+              },
+              "required": [
+                "fromCurrency",
+                "toCurrency",
+                "amount"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "doc": "node swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,9 +13,11 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "node-cache": "^5.1.2",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.9"
+    "nodemon": "^2.0.9",
+    "swagger-autogen": "^2.6.3"
   }
 }
